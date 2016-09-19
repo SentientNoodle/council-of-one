@@ -7,12 +7,12 @@
         <link rel="stylesheet" href="/www/css/archive.css">
         <script src="/www/js/archive.js"></script>
     </head>
-    <body>
+    <body onresize='resizePostboxHeight();'>
         <?php
             $page = 'archive';
             include('../php/nav.php');
         ?>
-        <div class='container'>
+        <div class='main container'>
             <div class='postbox container col-lg-8 col-lg-offset-2'>
                 <form class="search col-lg-8 col-lg-offset-2" role="search">
                     <div class="input-group add-on">

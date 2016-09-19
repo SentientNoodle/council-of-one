@@ -41,11 +41,10 @@ h2 > a:hover {
 .holder {
     overflow: hidden;
     height: 100%;
-    will-change: scroll-position;
 }
 
 .content {
-    overflow: hidden;
+    overflow-y: scroll;
     height: 100%;
 }
 

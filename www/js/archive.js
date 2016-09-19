@@ -15,3 +15,29 @@ function dullEdge(o) {
         p.style.borderBottomRightRadius = "4px";
     }
 }
+
+function setPostboxHeight() {
+    var b = document.getElementsByClassName('navbar-toggle')[0];
+    var d = document.getElementsByClassName('postbox')[0];
+    if (b.getAttribute('aria-expanded') == 'true') {
+        d.style.height = 'calc(100vh - 70px)';
+    } else {
+        d.style.height = 'calc(100vh - 208px)';
+    }
+}
+
+function resizePostboxHeight() {
+    var b = document.getElementsByClassName('navbar-toggle')[0];
+    var d = document.getElementsByClassName('postbox')[0];
+    if (document.body.clientWidth >= 768) {
+        d.style.height = 'calc(100vh - 70px)';
+    } else {
+        if (b.getAttribute('aria-expanded') == 'true') {
+            d.style.height = 'calc(100vh - 208px)';
+        } else {
+            d.style.height = 'calc(100vh - 70px)';
+        }
+    }
+
+    postLinkHeight();
+}

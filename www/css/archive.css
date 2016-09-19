@@ -8,13 +8,9 @@ body {
 }
 
 .postbox {
-    overflow-y: hidden;
+    overflow-y: auto;
     background-color: #555555;
     height: calc(100vh - 70px);
-}
-
-.postbox:hover {
-    overflow-y: scroll;
 }
 
 .search {
@@ -77,12 +73,6 @@ body {
     align-self: center;
 }
 
-@media (max-width: 700px) {
-    .post-link > i {
-        font-size: 2.77777777777777778vw;
-    }
-}
-
 .no-results {
     background: #FFFFFF;
     display: flex;
@@ -95,4 +85,25 @@ body {
 .no-results > h3 {
     flex: 1;
     text-align: center;
+}
+
+@media (max-width: 700px) {
+    .post-link > i {
+        font-size: 2.77777777777777778vw;
+    }
+}
+
+@media (max-width: 500px) {
+    .main {
+        width: 100%;
+        padding: 0px;
+    }
+    
+    .postbox {
+        padding: 0px;
+    }
+    
+    .panel-group {
+        padding: 0px;
+    }
 }
