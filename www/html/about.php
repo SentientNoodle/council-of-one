@@ -1,4 +1,4 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html>
     <head>
         <?php
@@ -8,7 +8,6 @@
     <body>
         <?php
             $page = 'about';
-
             include('../php/nav.php');
         ?>
         

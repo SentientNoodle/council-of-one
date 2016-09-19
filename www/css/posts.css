@@ -1,0 +1,12 @@
+body {
+    background-color: #E7E7E7;
+}
+
+.navbar-nav>li {
+    text-align: center;
+}
+
+.post {
+    background-color: #FFFFFF;
+    border-radius: 16px;
+}

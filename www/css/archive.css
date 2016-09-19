@@ -1,0 +1,98 @@
+body {
+    overflow: hidden;
+    background-color: #E7E7E7;
+}
+
+.navbar-nav > li {
+    text-align: center;
+}
+
+.postbox {
+    overflow-y: hidden;
+    background-color: #555555;
+    height: calc(100vh - 70px);
+}
+
+.postbox:hover {
+    overflow-y: scroll;
+}
+
+.search {
+    padding-top: 8px;
+    padding-bottom: 8px;
+}
+
+.result-holder {
+    padding: 0px;
+    padding-bottom: 6px;
+}
+
+.result-holder > .result {
+    cursor: pointer;
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+    padding: 0px;
+}
+
+.result > .panel-heading {
+    border-radius: 0px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
+
+.result-header {
+    display: flex;
+    align-items: stretch;
+    align-content: center;
+}
+
+.result-header > h4 {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.post-link {
+    padding-left: 2.7777777777777778%;
+    display: flex;
+    align-self: stretch;
+    flex: 1;
+    background: #F5F5F5;
+    border-left: #CCCCCC solid 2px;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+}
+
+.post-link:hover {
+    background: #CCCCCC;
+    text-decoration: none;
+}
+
+.post-link:focus {
+    text-decoration: none;
+}
+
+.post-link > i {
+    font-size: 20px;
+    color: #555555;
+    align-self: center;
+}
+
+@media (max-width: 700px) {
+    .post-link > i {
+        font-size: 2.77777777777777778vw;
+    }
+}
+
+.no-results {
+    background: #FFFFFF;
+    display: flex;
+    align-content: center;
+    align-self: stretch;
+    flex: 1;
+    border-radius: 4px;
+}
+
+.no-results > h3 {
+    flex: 1;
+    text-align: center;
+}

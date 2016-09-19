@@ -1,4 +1,4 @@
-use blog;
+use council;
 DROP PROCEDURE IF EXISTS sp_split;
 delimiter ;;
 CREATE PROCEDURE sp_split(IN toSplit text, IN target char(255))
