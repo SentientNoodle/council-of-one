@@ -41,3 +41,16 @@ function resizePostboxHeight() {
 
     postLinkHeight();
 }
+
+function updateWeight(r,iw,fw,s) {
+    $.ajax({
+        type: 'POST',
+        url: '/www/php/updateWeight.php',
+        data: {
+            result: r,
+            iweight: iw,
+            fweight: fw,
+            searches: s
+        }
+    });
+}
