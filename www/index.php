@@ -3,9 +3,9 @@
     <head>
         <title>Council of One</title>
         <?php
-            include('../php/head.php');
+            include('/home/ubuntu/workspace/php/head.php');
         ?>
-        <link rel="stylesheet" href="/www/css/index.css">
+        <link rel="stylesheet" href="/css/index.css">
     </head>
     <body>
         <?php
@@ -14,18 +14,18 @@
         <div class='holder'>
             <div class='container col-lg-10 content'>
                 <?php
-                    include('../php/nav.php');
+                    include('/home/ubuntu/workspace/php/nav.php');
                 ?>
                 <div class='container col-lg-offset-2 col-lg-8'>
                     <?php
-                        include('../php/getAllPosts.php');
+                        include('/home/ubuntu/workspace/php/getAllPosts.php');
                     ?>
                 </div>
             </div>
             <div class='container sidebar'>
                 <ul class='post-list'>
                     <?php
-                        include('../php/sidebar.php');
+                        include('/home/ubuntu/workspace/php/sidebar.php');
                     ?>
                 </ul>
             </div>

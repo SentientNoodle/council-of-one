@@ -45,7 +45,7 @@ function resizePostboxHeight() {
 function updateWeight(r,iw,fw,s) {
     $.ajax({
         type: 'POST',
-        url: '/www/php/updateWeight.php',
+        url: 'posts.php',
         data: {
             result: r,
             iweight: iw,

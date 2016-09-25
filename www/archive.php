@@ -1,17 +1,16 @@
-<?php session_start(); ?>
 <!DOCTYPE html>
 <html>
     <head>
         <?php
-            include('../php/head.php');
+            include('/home/ubuntu/workspace/php/head.php');
         ?>
-        <link rel="stylesheet" href="/www/css/archive.css">
-        <script src="/www/js/archive.js"></script>
+        <link rel="stylesheet" href="css/archive.css">
+        <script src="js/archive.js"></script>
     </head>
     <body onresize='resizePostboxHeight();'>
         <?php
             $page = 'archive';
-            include('../php/nav.php');
+            include('/home/ubuntu/workspace/php/nav.php');
         ?>
         <div class='main container'>
             <div class='postbox container col-lg-8 col-lg-offset-2'>
@@ -25,7 +24,7 @@
                 </form>
                 <div class='panel-group col-md-12' id='posts'>
                     <?php
-                        include('../php/search.php');
+                        include('/home/ubuntu/workspace/php/search.php');
                     ?>
                     <script type="text/javascript">
                         postLinkHeight();

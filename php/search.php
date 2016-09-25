@@ -14,17 +14,15 @@
 
     include('../php/sqlconnect.php');
 
-    if (!isset($_SESSION['searches'])) {
-        $sql = 'SELECT Value FROM Vars WHERE Name="searches";';
-        $result = $conn->query($sql);
-        $searches = $result->fetch_assoc();
-        $_SESSION['searches'] = (int)$searches['Value'];
-        
-        $sql = 'SELECT Value FROM Vars WHERE Name="weight";';
-        $result = $conn->query($sql);
-        $weight = $result->fetch_assoc();
-        $_SESSION['weight'] = (int)$weight['Value'];
-    }
+    $sql = 'SELECT Value FROM Vars WHERE Name="searches";';
+    $result = $conn->query($sql);
+    $searches = $result->fetch_assoc();
+    $searches = (int)$searches['Value'];
+    
+    $sql = 'SELECT Value FROM Vars WHERE Name="weight";';
+    $result = $conn->query($sql);
+    $weight = $result->fetch_assoc();
+    $weight = (double)$weight['Value'];
 
     if (!isset($_GET['s']) or $_GET['s'] == '') {
         $sql = 'SELECT ID,Title,Content FROM Posts ORDER BY ID DESC;';
@@ -41,13 +39,14 @@
         $query = join(',',$query);
 
         $sql = $conn->prepare('call Post_Search(?,?)');
-        $searches = $_SESSION['searches'];
-        $iweight = $_SESSION['weight'];
+        $iweight = $weight;
         $fweight = $iweight + pow(-1,rand(0,1))*(1/pow(2,floor(log($searches,2))));
+        if ($fweight <= 0) {
+            $fweight = .01;
+        }
+        
         $sql->bind_param('sd',$query,$fweight);
         $sql->execute();
-        
-        session_destroy();
 
         $sql = 'select * from scoreboard where score > 0 order by score desc, ID desc;';
         $result = $conn->query($sql);
